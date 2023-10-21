@@ -18,14 +18,17 @@ const Login = () => {
     console.log("password", password)
 
     const handleSubmit = () => {
-        if (email === 'cool_monkey' && password === 'banana') {
-            navigation.navigate('Home')
-        } else if (email != 'cool_monkey') {
-            Alert.alert('Login Failed', 'Please check your user name.');
-        } else if (password != 'banana') {
-            Alert.alert('Login Failed', 'Please check your password.');
+        if (email === 'user_name' && password === 'password') {
+            navigation.navigate('Machine')
+        } else if (email != 'user_name') {
+            //Alert.alert('Login Failed', 'Please check your user name.');
+            navigation.navigate('Machine')
+        } else if (password != 'password') {
+            //Alert.alert('Login Failed', 'Please check your password.');
+            navigation.navigate('Machine')
         } else {
-            Alert.alert('Login Failed', 'Please check your user name and password.');
+            //Alert.alert('Login Failed', 'Please check your user name and password.');
+            navigation.navigate('Machine')
         }
 
     }
