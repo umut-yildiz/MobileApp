@@ -1,45 +1,39 @@
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
-import React, { useState } from 'react';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
+import React, {useState} from 'react';
 import Database from './Database';
-import { TextInput, FlatList } from 'react-native-gesture-handler';
+import {TextInput, FlatList} from 'react-native-gesture-handler';
 
 const Critical = () => {
   const [input, setInput] = useState('');
   const [listData, setListData] = useState(Database);
 
-  const renderItem = ({ item }) => {
+  const renderItem = ({item}) => {
     return (
-      <View style={{ ...styles.rowFront, backgroundColor: item.color }}>
-        <View style={{ alignItems: 'flex-end' }}>
-          <Text style={{ ...styles.date, fontSize: 12 }}>
-            {item.date}
-          </Text>
-        </View>
-        <TouchableHighlight>
-          <View>
-            <Text style={{ ...styles.title, fontSize: 16 }}>
-              {item.title}
+      <TouchableHighlight style={{...styles.rowFront}}>
+        <>
+          <View style={styles.titleContainer}>
+            <Text style={{...styles.title, fontSize: 16}}>{item.title}</Text>
+          </View>
+          <View style={styles.dateTimeContainer}>
+            <Text style={{...styles.date, fontSize: 12}}>{item.date}</Text>
+            <Text style={{...styles.date, fontSize: 12, alignSelf: 'flex-end'}}>
+              {item.time}
             </Text>
           </View>
-        </TouchableHighlight>
-        <View style={{ alignItems: 'flex-end' }}>
-          <Text style={{ ...styles.date, fontSize: 12 }}>
-            {item.time}
-          </Text>
-        </View>
-      </View>
+        </>
+      </TouchableHighlight>
     );
   };
 
-  const filteredData = listData.filter((item) =>
-    item.title.toLowerCase().includes(input.toLowerCase())
+  const filteredData = listData.filter(item =>
+    item.title.toLowerCase().includes(input.toLowerCase()),
   );
 
   return (
     <View style={styles.container}>
       <TextInput
         value={input}
-        onChangeText={(text) => setInput(text)}
+        onChangeText={text => setInput(text)}
         style={styles.searchBar}
         placeholder="Search"
         placeholderTextColor="#999"
@@ -47,7 +41,7 @@ const Critical = () => {
       <FlatList
         data={filteredData}
         renderItem={renderItem}
-        keyExtractor={(item) => item.key}
+        keyExtractor={item => item.key}
       />
     </View>
   );
@@ -65,11 +59,22 @@ const styles = StyleSheet.create({
   },
   rowFront: {
     backgroundColor: '#FFF',
-    borderRadius: 5,
+    borderRadius: 15,
+    marginHorizontal: 15,
     height: 70,
-    margin: 5,
     marginBottom: 15,
     elevation: 5,
+    padding: 8,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  titleContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dateTimeContainer: {
+    justifyContent: 'center',
   },
   rowBack: {
     flex: 1,

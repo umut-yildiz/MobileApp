@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "422578939140",
+    "project_id": "notification-app-3995e",
+    "storage_bucket": "notification-app-3995e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422578939140:android:c7e40fcf4d9a1baeff1c51",
+        "android_client_info": {
+          "package_name": "com.marelnotificationapp_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9oNOrwZ25j-xKueHC1G4Jzy2IeqevwvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
