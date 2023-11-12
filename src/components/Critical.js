@@ -5,7 +5,7 @@ import Database from './Database';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { TextInput } from 'react-native-gesture-handler';
 
-const SensorX_Critical = ({ navigation }) => {
+const Critical = ({ navigation }) => {
 
   const [listData, setListData] = useState(
     Database.map((DatabaseItem, index) => ({
@@ -18,6 +18,7 @@ const SensorX_Critical = ({ navigation }) => {
       customer: DatabaseItem.customer,
       site: DatabaseItem.site,
       device: DatabaseItem.device,
+      image: DatabaseItem.image,
     })),
   );
 
@@ -105,13 +106,13 @@ const SensorX_Critical = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-    <TextInput
-      value={input}
-      onChangeText={(text) => setInput(text)}
-      style={styles.searchBar}
-      placeholder="Search"
-      placeholderTextColor="#999"
-    />
+      <TextInput
+        value={input}
+        onChangeText={(text) => setInput(text)}
+        style={styles.searchBar}
+        placeholder="Search"
+        placeholderTextColor="#999"
+      />
       <SwipeListView
         data={filteredData}
         renderItem={renderItem}
@@ -119,21 +120,12 @@ const SensorX_Critical = ({ navigation }) => {
         leftOpenValue={75}
         rightOpenValue={75}
         disableLeftSwipe
-      //onRowDidOpen={onRowDidOpen}
-      //leftActivationValue={100}
-      //rightActivationValue={-200}
-      //leftActionValue={0}
-      //rightActionValue={-500}
-      //onLeftAction={onLeftAction}
-      //onRightAction={onRightAction}
-      //onLeftActionStatusChange={onLeftActionStatusChange}
-      //onRightActionStatusChange={onRightActionStatusChange}
       />
     </View>
   )
 }
 
-export default SensorX_Critical
+export default Critical
 
 const styles = StyleSheet.create({
   searchBar: {
@@ -142,14 +134,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e0e0e0',
     borderRadius: 10,
     fontSize: 14,
-  },  
-  //container: {
-  //  backgroundColor: '#f4f4f4',
-  //  flex: 1,
-  //},
-  //backTextWhite: {
-  //  color: '#FFF',
-  //},
+  },
   rowFront: {
     backgroundColor: '#FFF',
     borderRadius: 5,
@@ -157,13 +142,6 @@ const styles = StyleSheet.create({
     margin: 5,
     marginBottom: 15,
     elevation: 5,
-  },
-  rowFrontVisible: {
-    backgroundColor: '#FFF',
-    borderRadius: 5,
-    height: 60,
-    padding: 10,
-    marginBottom: 15,
   },
   rowBack: {
     flex: 1,
@@ -178,29 +156,20 @@ const styles = StyleSheet.create({
     width: 75,
     paddingLeft: 25,
   },
-  //backLeftBtnRight: {
-  //  backgroundColor: '#1f65ff',
-  //  Left: 75,
-  //},
   backLeftBtnLeft: {
     backgroundColor: 'orange',
     left: 0,
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
   },
-  icon: {
-    height: 25,
-    width: 25,
-    marginLeft: 5,
-  },
   title: {
     fontSize: 14,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: '#666',
+    color: '#454545',
   },
   date: {
     fontSize: 12,
-    color: '#999',
+    color: '#565051',
   },
 });

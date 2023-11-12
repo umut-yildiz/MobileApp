@@ -2,7 +2,9 @@ import { View, Text, Image, Button, TextInput, StyleSheet, KeyboardAvoidingView,
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
+
 const Login = () => {
+
     const navigation = useNavigation();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

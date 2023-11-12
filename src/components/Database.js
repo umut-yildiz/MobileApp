@@ -8,7 +8,9 @@ export default Database = [
         country: 'Turkiye',
         customer: 'Customer A',
         site: 'Site 1',
-        device: 'Device A'
+        device: 'Device A',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#2dc937'
     },
     {
         id: 2,
@@ -19,7 +21,9 @@ export default Database = [
         country: 'Bulgaria',
         customer: 'Customer B',
         site: 'Site 2',
-        device: 'Device B'
+        device: 'Device B',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#e7b416'
     },
     {
         id: 3,
@@ -30,7 +34,9 @@ export default Database = [
         country: 'Iceland',
         customer: 'Customer C',
         site: 'Site 3',
-        device: 'Device C'
+        device: 'Device C',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#2dc937'
     },
     {
         id: 4,
@@ -41,7 +47,9 @@ export default Database = [
         country: 'China',
         customer: 'Customer D',
         site: 'Site 4',
-        device: 'Device D'
+        device: 'Device D',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#cc3232'
     },
     {
         id: 5,
@@ -52,7 +60,9 @@ export default Database = [
         country: 'Spain',
         customer: 'Customer E',
         site: 'Site 5',
-        device: 'Device E'
+        device: 'Device E',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#e7b416'
     },
     {
         id: 6,
@@ -63,7 +73,9 @@ export default Database = [
         country: 'India',
         customer: 'Customer F',
         site: 'Site 6',
-        device: 'Device F'
+        device: 'Device F',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#2dc937'
     },
     {
         id: 7,
@@ -74,7 +86,9 @@ export default Database = [
         country: 'France',
         customer: 'Customer G',
         site: 'Site 7',
-        device: 'Device G'
+        device: 'Device G',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#cc3232'
     },
     {
         id: 8,
@@ -85,7 +99,9 @@ export default Database = [
         country: 'USA',
         customer: 'Customer H',
         site: 'Site 8',
-        device: 'Device H'
+        device: 'Device H',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#e7b416'
     },
     {
         id: 9,
@@ -96,7 +112,9 @@ export default Database = [
         country: 'Brazil',
         customer: 'Customer I',
         site: 'Site 9',
-        device: 'Device I'
+        device: 'Device I',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#e7b416'
     },
     {
         id: 10,
@@ -107,6 +125,8 @@ export default Database = [
         country: 'Germany',
         customer: 'Customer J',
         site: 'Site 10',
-        device: 'Device J'
+        device: 'Device J',
+        image: "https://marel.com/media/vt2hui0g/industrial-oven-modularoven.jpg",
+        color: '#2dc937'
     },
 ];

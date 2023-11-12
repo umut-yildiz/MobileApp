@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { FlatList, TextInput } from 'react-native-gesture-handler';
 
 
-const SensorX_Warning = ({ navigation }) => {
+const Warning = ({ navigation }) => {
 
   const [listData, setListData] = useState(
     Notifications.map((NotificationItem, index) => ({
@@ -97,32 +97,35 @@ const SensorX_Warning = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        value={input}
-        onChangeText={(text) => setInput(text)}
-        style={styles.searchBar}
-        placeholder="Search"
-        placeholderTextColor="#999"
-      />
-      <FlatList
+    <TextInput
+      value={input}
+      onChangeText={(text) => setInput(text)}
+      style={styles.searchBar}
+      placeholder="Search"
+      placeholderTextColor="#999"
+    />
+      <SwipeListView
         data={filteredData}
-        renderItem={({ item }) => (
-          <SwipeListView
-            data={[item]}
-            renderItem={renderItem}
-            renderHiddenItem={renderHiddenItem}
-            leftOpenValue={75}
-            rightOpenValue={-75}
-            disableLeftSwipe
-            useNativeDriver={false} // Set to true if there are performance issues
-          />
-        )}
+        renderItem={renderItem}
+        renderHiddenItem={renderHiddenItem}
+        leftOpenValue={-75}
+        rightOpenValue={75}
+        disableLeftSwipe
+      //onRowDidOpen={onRowDidOpen}
+      //leftActivationValue={100}
+      //rightActivationValue={-200}
+      //leftActionValue={0}
+      //rightActionValue={-500}
+      //onLeftAction={onLeftAction}
+      //onRightAction={onRightAction}
+      //onLeftActionStatusChange={onLeftActionStatusChange}
+      //onRightActionStatusChange={onRightActionStatusChange}
       />
     </View>
   );
 }
 
-export default SensorX_Warning
+export default Warning
 
 const styles = StyleSheet.create({
   searchBar: {
@@ -186,10 +189,10 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: '#666',
+    color: '#454545',
   },
-  details: {
+  date: {
     fontSize: 12,
-    color: '#999',
+    color: '#565051',
   },
 });

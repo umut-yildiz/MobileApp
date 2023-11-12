@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { React, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './components/Login';
@@ -9,8 +9,8 @@ import Nuova_I from './components/Nuova_I';
 import Flexicut from './components/Flexicut';
 import Details from './components/Details';
 
-
 export default function App() {
+
   const Stack = createStackNavigator();
 
   return (

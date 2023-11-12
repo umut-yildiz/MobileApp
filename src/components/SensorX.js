@@ -2,8 +2,9 @@ import React from 'react';
 import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import SensorX_Critical from './SensorX_Critical';
-import SensorX_Warning from './SensorX_Warning';
+import SensorX_Critical from './Critical';
+import SensorX_Warning from './Warning';
+import SensorX_Status from './Status';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,6 +28,19 @@ const SensorX = () => {
           ),
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons name="alarm-light" color={focused ? 'red' : 'white'} size={35} />
+          ),
+          tabBarBadge: 1,
+        }}
+      />
+      <Tab.Screen
+        name="Status"
+        component={SensorX_Status}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <Text style={{ color: focused ? 'green' : 'white' }}>Status</Text>
+          ),
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons name="bell-check-outline" color={focused ? 'green' : 'white'} size={30} />
           ),
         }}
       />
